@@ -2,6 +2,13 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "transmps",
   "compatibility_date": "2026-06-12",
+  "workers_dev": true,
+  "preview_urls": true,
+
+  "routes": [
+    { "pattern": "transmps.uk", "custom_domain": true },
+    { "pattern": "www.transmps.uk", "custom_domain": true }
+  ],
 
   "assets": {
     "directory": "./dist"
