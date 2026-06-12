@@ -15,15 +15,15 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 Some content in this project is sourced from third-party sources and is subject to their respective licenses. Please see below for details on indvidual sources:
 
 - Geographic Boundary Data from the Office of National Statistics (https://services1.arcgis.com)
-  - © Crown copyright, contains Office of National Statistics data
+  - Contains Office of National Statistics data, © Crown copyright
 - MP Roster Data and Images from the UK Parliament (https://members.parliament.uk/)
   - Contains Parliamentary information licensed under the [Open Parliament Licence v3.0](https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/)
-- CARTO (https://carto.com) and OpenStreetMap (https://openstreetmap.org/)
+- Map Tiles from CARTO (https://carto.com) and OpenStreetMap (https://openstreetmap.org/)
   - © OpenStreetMap contributors
   - © CARTO
 - Postcode Geocoding from Postcodes.io (https://postcodes.io/)
-  - © Royal Mail copyright, contains Ordnance Survey data
-  - © Crown copyright, contains Royal Mail data
+  - Contains Ordnance Survey data, © Royal Mail copyright,
+  - Contains Royal Mail data, © Crown copyright
 
 ### Disclaimer
 
