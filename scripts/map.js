@@ -16,7 +16,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png'
     }
 }).addTo(map);
 
-fetch('../data/mps.geojson')
+fetch('/data/mps.geojson')
     .then(res => {
         if (!res.ok) throw new Error(`Failed to load map file: ${res.status}`);
         return res.json();
