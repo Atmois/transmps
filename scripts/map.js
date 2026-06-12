@@ -11,7 +11,12 @@ const map = L.map('map', {
 });
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    attribution: [
+        '&copy; <a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+        '&copy; CARTO',
+        '&copy; Crown copyright, contains OS data ',
+        'Contains Parliamentary information licensed under the <a href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/" target="_blank">Open Parliament Licence v3.0</a>'
+    ].join(' | '),
     tileAttributes: {
         'fetchpriority': 'high',
         'loading': 'eager'
