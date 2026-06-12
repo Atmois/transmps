@@ -1,0 +1,14 @@
+{
+  "name": "transmps",
+  "description": "Find and track your MP's stance and votes on transgender rights across the UK",
+  "scripts": {
+    "build:map": "node scripts/build-map.mjs"
+  },
+  "author": "Atmois",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.28.0",
+	"devDependencies": {
+		"serve": "^14.2.6",
+    "mapshaper": "0.7.22"
+	}
+}
