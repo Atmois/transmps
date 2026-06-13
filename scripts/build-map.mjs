@@ -3,7 +3,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const unknownPictureUrl = 'https://members.parliament.uk/dist/vacant-placeholder.png';
-const dataDir = path.join(process.cwd(), 'data');
+const dataDir = path.join(process.cwd(), 'public/data');
 if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
 }
@@ -11,7 +11,7 @@ if (!fs.existsSync(dataDir)) {
 async function collectEDM240Data() {
     try {
         console.log('Collecting EDM240 data');
-        
+
         const edmUrl = 'https://oralquestionsandmotions-api.parliament.uk/EarlyDayMotion/65938';
         const response = await fetch(edmUrl);
         if (!response.ok) throw new Error(`Failed to fetch EDM data: ${response.status}`);
