@@ -65,6 +65,7 @@ body {
     color: #FFFFFF;
     border-radius: 4px;
     text-transform: uppercase;
+    max-width: 100px;
 }
 
 #search-button {
@@ -84,5 +85,21 @@ body {
     color: #FF0000;
     margin-top: 5px;
     font-size: 14px;
-    display: none;
+}
+
+/* Filter styles */
+#filter-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 300;
+    background: #222222;
+    color: #E0E0E0;
+    padding: 8px 12px;
+    border: 1px solid #444444;
+    border-radius: 4px;
+}
+
+#filter-container a {
+    color: #8AADF4;
 }

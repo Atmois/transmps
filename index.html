@@ -22,6 +22,7 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script type="module" src="./scripts/map.js"></script>
+    <script type="module" src="./scripts/edm.js"></script>
 </head>
 
 <body>
@@ -30,6 +31,12 @@
             <input type="text" id="postcode-input" placeholder="Postcode">
             <button id="search-button">Search</button>
             <div id="search-error"></div>
+        </div>
+
+        <div id="filter-container">
+            Filters
+            <br />
+            <label><input type="checkbox" id="filter-edm240" checked> <a href="https://edm.parliament.uk/early-day-motion/65938" target="_blank">EDM 240</a></label>
         </div>
 
         <div id="map"></div>
