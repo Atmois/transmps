@@ -6,7 +6,7 @@ const map = L.map('map', {
     center: [55.75, -3.5],
     zoom: 6,
     minZoom: 6,
-    maxZoom: 12,
+    maxZoom: 15,
     maxBounds: L.latLngBounds([40, -15], [65, 5]),
 });
 
@@ -29,7 +29,6 @@ fetch('/data/mps.geojson')
             onEachFeature: (feature, layer) => {
                 const props = feature.properties;
                 const imageUrl = props.mp_image || 'https://members.parliament.uk/dist/vacant-placeholder.png';
-
                 const partyStyle = getPartyStyle(props.mp_party);
                 const partyColor = partyStyle.fillColor;
 
@@ -43,13 +42,25 @@ fetch('/data/mps.geojson')
                 `);
 
                 layer.on('mouseover', function () {
-                    if (this !== highlightedLayer) this.setStyle({ fillOpacity: 0.95 });
+                    if (this !== highlightedLayer) {
+                        const currentBase = this.feature.properties.currentOpacity;
+                        const hoverOpacity = currentBase + 0.25
+                        this.setStyle({ fillOpacity: hoverOpacity });
+                    }
                 });
+
                 layer.on('mouseout', function () {
-                    if (this !== highlightedLayer) this.setStyle({ fillOpacity: 0.75 });
+                    if (this !== highlightedLayer) {
+                        const originalOpacity = this.feature.properties.currentOpacity;
+                        this.setStyle({ fillOpacity: originalOpacity });
+                    }
                 });
             }
         }).addTo(map);
+
+        window.geoJsonLayer = geoJsonLayer;
+        window.getPartyStyle = getPartyStyle;
+        document.dispatchEvent(new CustomEvent('mapLayersReady'));
     })
     .catch(err => console.error("Map loading error:", err));
 
@@ -106,8 +117,14 @@ function handleSearch() {
             let matchFound = false;
 
             if (highlightedLayer || postcodeMarker) {
-                geoJsonLayer.resetStyle(highlightedLayer);
-                map.removeLayer(postcodeMarker);
+                if (highlightedLayer) {
+                    highlightedLayer.setStyle({
+                        weight: 0.5,
+                        color: '#222222',
+                        fillOpacity: 0.75
+                    });
+                }
+                if (postcodeMarker) map.removeLayer(postcodeMarker);
             }
 
             geoJsonLayer.eachLayer(function (layer) {
@@ -128,7 +145,6 @@ function handleSearch() {
                     fillColor: '#FF80FF',
                     color: '#FFFFFF',
                     weight: 2,
-                    opacity: 1,
                     fillOpacity: 0.8
                 }).addTo(map);
 
