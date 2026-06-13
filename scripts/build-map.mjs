@@ -41,7 +41,7 @@ async function buildMap() {
 
         console.log("Fetching data from Parliament API");
         while (!fetchFinished) {
-            const apiURL = `https://members-api.parliament.uk/api/Members/Search?house=1&IsCurrentMember=true&take=10&skip=${skip}`;
+            const apiURL = `https://members-api.parliament.uk/api/Members/Search?house=1&IsCurrentMember=true&take=20&skip=${skip}`;
             const apiResponse = await fetch(apiURL);
 
             if (!apiResponse.ok) {
@@ -57,7 +57,7 @@ async function buildMap() {
                 fetchFinished = true;
             } else {
                 allMembers = allMembers.concat(items);
-                skip += 10;
+                skip += 20;
             }
         }
 
@@ -67,11 +67,11 @@ async function buildMap() {
         let matchedCount = 0;
 
         boundariesGeoJSON.features = boundariesGeoJSON.features.map(feature => {
-            let mapName = feature.properties[PCON24NM];
+            let mapName = feature.properties["PCON24NM"];
 
             // Done manually as the API returns a different name for this constituency than the map file
             if (mapName === "Montgomeryshire and Glyndwr") {
-                feature.properties[PCON24NM] = "Montgomeryshire and Glyndŵr";
+                feature.properties["PCON24NM"] = "Montgomeryshire and Glyndŵr";
                 mapName = "Montgomeryshire and Glyndŵr";
             }
 

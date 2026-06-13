@@ -162,7 +162,7 @@ function handleSearch() {
 }
 
 window.onclick = function (event) {
-    if (event.target == document.getElementById('site-disclaimer')) {
+    if (event.target.closest('#site-disclaimer')) {
         document.getElementById('site-disclaimer').style.display = "none";
     }
 }

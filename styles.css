@@ -16,14 +16,26 @@ body {
     position: absolute;
     bottom: 40px;
     left: 20px;
-    z-index: 300;
-    background: #222222;
-    color: #E0E0E0;
-    padding: 8px 12px;
-    font-size: 11px;
-    border: 1px solid #444444;
+    z-index: 200;
+    background: #EFF1F5;
+    color: #4C4F69;
+    padding: 8px 1px 8px 12px;
+    border: 1px solid #CCD0DA;
     border-radius: 4px;
     max-width: 250px;
+}
+
+#site-disclaimer .close-btn {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+    color: #1A1A1A;
+    cursor: pointer;
 }
 
 /* Popup card styles */
@@ -92,14 +104,29 @@ body {
     position: absolute;
     top: 60px;
     right: 20px;
-    z-index: 300;
-    background: #222222;
-    color: #E0E0E0;
+    z-index: 200;
+    background: #EFF1F5;
+    color: #4C4F69;
     padding: 8px 12px;
-    border: 1px solid #444444;
+    border: 1px solid #CCD0DA;
     border-radius: 4px;
 }
 
 #filter-container a {
-    color: #8AADF4;
+    color: #1E66F5;
+}
+
+/* Legend styles */
+#legend-container {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    z-index: 200;
+    background: #EFF1F5;
+    color: #4C4F69;
+    padding: 8px 12px;
+    border: 1px solid #CCD0DA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
