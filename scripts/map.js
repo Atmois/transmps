@@ -11,7 +11,7 @@ const map = L.map('map', {
 });
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution: 'Sources listed at <a href="https://github.com/Atmois/transmps#3rd-party-licenses" target="_blank">https://github.com/Atmois/transmps#3rd-party-licenses</a>',
+    attribution: '&copy; <a href="https://github.com/atmois/transmps#3rd-party-licenses" target="_blank">https://github.com/Atmois/transmps#3rd-party-licenses</a>',
     tileAttributes: {
         'fetchpriority': 'high',
         'loading': 'eager'
@@ -116,8 +116,7 @@ function handleSearch() {
                     highlightedLayer = layer;
                     layer.setStyle({
                         weight: 5,
-                        color: '#FF80FF',
-                        fillOpacity: 0.9
+                        color: '#FF80FF'
                     });
                     layer.bringToFront();
                 }
@@ -144,6 +143,12 @@ function handleSearch() {
             errorDiv.style.display = 'block';
             console.error(err);
         });
+}
+
+window.onclick = function (event) {
+    if (event.target == document.getElementById('site-disclaimer')) {
+        document.getElementById('site-disclaimer').style.display = "none";
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
