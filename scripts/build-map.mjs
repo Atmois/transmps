@@ -45,7 +45,7 @@ async function buildMap() {
             const apiResponse = await fetch(apiURL);
 
             if (!apiResponse.ok) {
-                console.error(`Error pulling API batch at skip ${skip}. Discontinuing fetch.`);
+                console.error(`Error pulling API batch at skip ${skip}. Discontinuing fetch`);
                 fetchFinished = true;
                 break;
             }
@@ -61,20 +61,17 @@ async function buildMap() {
             }
         }
 
-        console.log(`Fetched ${allMembers.length} MPs.`);
+        console.log(`Fetched ${allMembers.length} MPs`);
 
         const sampleProps = boundariesGeoJSON.features[0].properties;
-        const nameKey = Object.keys(sampleProps).find(k => k.toLowerCase() === 'pcon24nm') || 'PCON24NM';
-        console.log(`Detected Name Key in map file: "${nameKey}"`);
-
         let matchedCount = 0;
 
         boundariesGeoJSON.features = boundariesGeoJSON.features.map(feature => {
-            let mapName = feature.properties[nameKey];
+            let mapName = feature.properties[PCON24NM];
 
             // Done manually as the API returns a different name for this constituency than the map file
             if (mapName === "Montgomeryshire and Glyndwr") {
-                feature.properties[nameKey] = "Montgomeryshire and Glyndŵr";
+                feature.properties[PCON24NM] = "Montgomeryshire and Glyndŵr";
                 mapName = "Montgomeryshire and Glyndŵr";
             }
 
