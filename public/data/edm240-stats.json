@@ -1,0 +1,95 @@
+{
+  "totalSignatures": 132,
+  "partyBreakdown": {
+    "Labour": {
+      "signatures": 68,
+      "totalMPsInParliament": 402,
+      "percentageSigned": 17
+    },
+    "Lib Dem": {
+      "signatures": 48,
+      "totalMPsInParliament": 72,
+      "percentageSigned": 67
+    },
+    "Green Party": {
+      "signatures": 3,
+      "totalMPsInParliament": 5,
+      "percentageSigned": 60
+    },
+    "Independent": {
+      "signatures": 1,
+      "totalMPsInParliament": 12,
+      "percentageSigned": 8
+    },
+    "SNP": {
+      "signatures": 5,
+      "totalMPsInParliament": 7,
+      "percentageSigned": 71
+    },
+    "Your Party": {
+      "signatures": 2,
+      "totalMPsInParliament": 2,
+      "percentageSigned": 100
+    },
+    "SDLP": {
+      "signatures": 1,
+      "totalMPsInParliament": 2,
+      "percentageSigned": 50
+    },
+    "Plaid Cymru": {
+      "signatures": 4,
+      "totalMPsInParliament": 4,
+      "percentageSigned": 100
+    },
+    "Conservative": {
+      "signatures": 0,
+      "totalMPsInParliament": 116,
+      "percentageSigned": 0
+    },
+    "Reform UK": {
+      "signatures": 0,
+      "totalMPsInParliament": 8,
+      "percentageSigned": 0
+    },
+    "Sinn Féin": {
+      "signatures": 0,
+      "totalMPsInParliament": 7,
+      "percentageSigned": 0
+    },
+    "Democratic Unionist Party": {
+      "signatures": 0,
+      "totalMPsInParliament": 5,
+      "percentageSigned": 0
+    },
+    "Alliance": {
+      "signatures": 0,
+      "totalMPsInParliament": 1,
+      "percentageSigned": 0
+    },
+    "Restore Britain": {
+      "signatures": 0,
+      "totalMPsInParliament": 1,
+      "percentageSigned": 0
+    },
+    "Speaker": {
+      "signatures": 0,
+      "totalMPsInParliament": 1,
+      "percentageSigned": 0
+    },
+    "Traditional Unionist Voice": {
+      "signatures": 0,
+      "totalMPsInParliament": 1,
+      "percentageSigned": 0
+    },
+    "Ulster Unionist Party": {
+      "signatures": 0,
+      "totalMPsInParliament": 1,
+      "percentageSigned": 0
+    },
+    "Vacant": {
+      "signatures": 0,
+      "totalMPsInParliament": 3,
+      "percentageSigned": 0
+    }
+  }
+}

@@ -100,9 +100,11 @@ function getPartyStyle(party) {
 }
 
 function handleSearch() {
-    const postcode = document.getElementById('postcode-input').value.trim().replaceAll(/\s/g, '');
-    const errorDiv = document.getElementById('search-error');
-    errorDiv.style.display = 'none';
+    const inputElement = document.getElementById('postcode-input');
+    const postcode = inputElement.value.trim().replaceAll(/\s/g, '');
+
+    inputElement.classList.remove('error-state');
+    inputElement.placeholder = "Postcode";
 
     if (!postcode) return;
 
@@ -156,8 +158,9 @@ function handleSearch() {
 
         })
         .catch(err => {
-            errorDiv.innerText = "Invalid Postcode";
-            errorDiv.style.display = 'block';
+            inputElement.value = '';
+            inputElement.placeholder = "invalid";
+            inputElement.classList.add('error-state');
             console.error(err);
         });
 }

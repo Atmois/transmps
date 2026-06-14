@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Trans MP Support</title>
     <meta name="description" content="Find and track your MP's stance and votes on transgender rights across the UK">
@@ -27,11 +27,43 @@
     <main>
         <div id="map"></div>
 
-        <div class="map-controls top-right">
-            <div id="search-container">
-                <input type="text" id="postcode-input" placeholder="Postcode">
-                <button id="search-button">Search</button>
-                <div id="search-error"></div>
+        <div class="map-overlay top-right">
+            <div class="search-row">
+                <div id="legend-container">
+                    <details class="legend-details">
+                        <summary class="legend-summary"><strong>Legend</strong></summary>
+                        <div class="legend-list">
+
+                            <!-- Special Cases -->
+                            <div><span style="color: #FFFFFF;">■</span> Vacant</div>
+                            <div><span style="color: #333333;">■</span> Speaker</div>
+                            <div><span style="color: #777777;">■</span> Independent</div>
+
+                            <!-- Parties (Alphabetical) -->
+                            <div><span style="color: #F4C72E;">■</span> Alliance</div>
+                            <div><span style="color: #0063B7;">■</span> Conservative</div>
+                            <div><span style="color: #D46A4C;">■</span> DUP</div>
+                            <div><span style="color: #00A85A;">■</span> Green Party</div>
+                            <div><span style="color: #E4003B;">■</span> Labour</div>
+                            <div><span style="color: #FF6400;">■</span> Lib Dems</div>
+                            <div><span style="color: #0AA77D;">■</span> Plaid Cymru</div>
+                            <div><span style="color: #17B9D1;">■</span> Reform UK</div>
+                            <div><span style="color: #062042;">■</span> Restore Britain</div>
+                            <div><span style="color: #FDF391;">■</span> SNP</div>
+                            <div><span style="color: #02665F;">■</span> Sinn Féin</div>
+                            <div><span style="color: #FF0000;">■</span> SDLP</div>
+                            <div><span style="color: #201863;">■</span> TUV</div>
+                            <div><span style="color: #23315C;">■</span> UUP</div>
+                            <div><span style="color: #FD4E4E;">■</span> Your Party</div>
+
+                        </div>
+                    </details>
+                </div>
+
+                <div id="search-container">
+                    <input type="text" id="postcode-input" placeholder="Postcode">
+                    <button id="search-button">&#x2315;</button>
+                </div>
             </div>
 
             <div id="filter-container">
@@ -40,35 +72,9 @@
                 <label><input type="checkbox" id="filter-edm240" checked> <a href="https://edm.parliament.uk/early-day-motion/65938" target="_blank">EDM 240</a></label>
             </div>
 
-            <div id="legend-container">
-                <details style="cursor: pointer;">
-                    <summary style="font-weight: bold; padding: 5px 0;">Legend</summary>
-                    <div>
-
-                        <!-- Special Cases -->
-                        <div><span style="color: #FFFFFF;">■</span> Vacant</div>
-                        <div><span style="color: #333333;">■</span> Speaker</div>
-                        <div><span style="color: #777777;">■</span> Independent</div>
-
-                        <!-- Parties (Alphabetical) -->
-                        <div><span style="color: #F4C72E;">■</span> Alliance</div>
-                        <div><span style="color: #0063B7;">■</span> Conservative</div>
-                        <div><span style="color: #D46A4C;">■</span> DUP</div>
-                        <div><span style="color: #00A85A;">■</span> Green Party</div>
-                        <div><span style="color: #E4003B;">■</span> Labour</div>
-                        <div><span style="color: #FF6400;">■</span> Lib Dems</div>
-                        <div><span style="color: #0AA77D;">■</span> Plaid Cymru</div>
-                        <div><span style="color: #17B9D1;">■</span> Reform UK</div>
-                        <div><span style="color: #062042;">■</span> Restore Britain</div>
-                        <div><span style="color: #FDF391;">■</span> SNP</div>
-                        <div><span style="color: #02665F;">■</span> Sinn Féin</div>
-                        <div><span style="color: #FF0000;">■</span> SDLP</div>
-                        <div><span style="color: #201863;">■</span> TUV</div>
-                        <div><span style="color: #23315C;">■</span> UUP</div>
-                        <div><span style="color: #FD4E4E;">■</span> Your Party</div>
-
-                    </div>
-                </details>
+            <div id="data-display-container" style="display: none;">
+                <strong id="data-box-title">EDM240 Votes</strong>
+                <div id="data-box-content"></div>
             </div>
         </div>
     </main>

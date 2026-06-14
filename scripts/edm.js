@@ -2,12 +2,55 @@ async function filterEDMSignatures() {
     if (!window.geoJsonLayer) return;
     const isChecked = document.getElementById('filter-edm240').checked;
 
+    const displayContainer = document.getElementById('data-display-container');
+    const contentContainer = document.getElementById('data-box-content');
+
     if (!isChecked) {
         window.geoJsonLayer.eachLayer(layer => {
             layer.feature.properties.currentOpacity = 0.75;
             layer.setStyle({ fillOpacity: 0.75 });
         });
+        displayContainer.style.display = 'none';
         return;
+    }
+
+    displayContainer.style.display = '';
+    contentContainer.style.display = '';
+
+    try {
+        const response = await fetch('/data/edm240-stats.json');
+
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        contentContainer.innerHTML = '';
+
+        const totalElem = document.createElement('p');
+        totalElem.innerHTML = `<strong>Total:</strong> ${data.totalSignatures}`;
+        contentContainer.appendChild(totalElem);
+
+        // Iterate through the party breakdown
+        Object.entries(data.partyBreakdown).forEach(([party, stats]) => {
+            if (stats.signatures > 0) {
+                const partyRow = document.createElement('div');
+                partyRow.className = 'party-row';
+
+                partyRow.innerHTML = `
+                    <span>${party}:</span>
+                    <strong>${stats.signatures}</strong>
+                    <small style="color: #666;">(${stats.percentageSigned}%)</small>
+                `;
+
+                contentContainer.appendChild(partyRow);
+            }
+        });
+
+    } catch (error) {
+        console.error("Could not load the EDM stats:", error);
+        contentContainer.innerHTML = `<p style="color: red;">Error loading data.</p>`;
     }
 
     try {
