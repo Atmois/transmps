@@ -1,10 +1,10 @@
 {
-  "totalSignatures": 132,
+  "totalSignatures": 137,
   "partyBreakdown": {
     "Labour": {
-      "signatures": 68,
+      "signatures": 72,
       "totalMPsInParliament": 402,
-      "percentageSigned": 17
+      "percentageSigned": 18
     },
     "Lib Dem": {
       "signatures": 48,
@@ -22,9 +22,9 @@
       "percentageSigned": 8
     },
     "SNP": {
-      "signatures": 5,
+      "signatures": 6,
       "totalMPsInParliament": 7,
-      "percentageSigned": 71
+      "percentageSigned": 86
     },
     "Your Party": {
       "signatures": 2,
