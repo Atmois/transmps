@@ -8,11 +8,15 @@ const map = L.map('map', {
     minZoom: 6,
     maxZoom: 15,
     maxBounds: L.latLngBounds([40, -15], [65, 5]),
+    zoomControl: false
 });
+
+// Recreate to move around the info button
+L.control.zoom({ position: 'topleft' }).addTo(map);
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
     attribution: ['&copy; <a href="https://github.com/atmois/transmps#3rd-party-licenses" target="_blank">https://github.com/Atmois/transmps#3rd-party-licenses</a>',
-        'This site is an independent project and is not affiliated with any government entity.'].join(' | '),
+        'This project is independent and is not affiliated with any government entity.'].join(' | '),
     tileAttributes: {
         'fetchpriority': 'high',
         'loading': 'eager'

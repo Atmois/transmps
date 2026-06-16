@@ -20,8 +20,8 @@ a {
 /* Map Overlays */
 .map-overlay.top-right {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -33,32 +33,78 @@ a {
     display: flex;
     gap: 8px;
     position: relative;
+    height: 30px;
+}
+
+.leaflet-top.leaflet-left .leaflet-control-zoom {
+    margin: 0px;
+    top: 50px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
 }
 
 /* Shared Panels */
 #filter-container,
-#legend-container,
-#data-display-container,
-#postcode-input {
+#data-display-container {
     background: #EFF1F5;
     color: #4C4F69;
     padding: 8px 12px;
     border: 1px solid #CCD0DA;
     border-radius: 4px;
     width: max-content;
-    box-sizing: border-box;
+}
+
+#search-button,
+#info-button {
+    width: 30px;
+    height: 30px;
+    background: #C6A0F6;
+    color: #000000;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#search-button:hover,
+#info-button:hover {
+    background: #CA9EE6;
+}
+
+/* Info Button */
+#info-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    text-align: center;
 }
 
 /* Postcode Search */
 #search-container {
     display: flex;
     gap: 6px;
+    height: 30px;
 }
 
 #postcode-input {
+    background: #EFF1F5;
+    color: #4C4F69;
+    border: 1px solid #CCD0DA;
+    border-radius: 4px;
+    width: max-content;
+    box-sizing: border-box;
     text-transform: uppercase;
     font-weight: bold;
-    max-width: 100px;
+    max-width: 125px;
+    height: 30px;
+    padding: 0 12px;
 }
 
 #postcode-input.error-state {
@@ -70,33 +116,29 @@ a {
     opacity: 1;
 }
 
-#search-button {
-    padding: 8px 12px;
-    background: #C6A0F6;
-    color: #222222;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#search-button:hover {
-    background: #CA9EE6;
-}
-
 /* Legend */
 #legend-container {
     position: absolute;
-    right: calc(100% + 8px);
-    min-width: 110px;
+    right: calc(100% + 6px);
+    background: #EFF1F5;
+    color: #4C4F69;
+    border: 1px solid #CCD0DA;
+    border-radius: 4px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.legend-details summary {
+    padding: 4px 12px; 
+    line-height: 20px;
+    display: list-item;
     cursor: pointer;
 }
 
 .legend-list {
-    margin-top: 8px;
-    max-height: 40dvh;
+    padding: 4px 12px 12px 12px;
+    max-height: 25dvh;
     overflow-y: auto;
-    padding-right: 5px;
 }
 
 .legend-item {
