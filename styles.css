@@ -1,6 +1,5 @@
 /* Layout */
 body {
-    padding: 0;
     margin: 0;
     font-family: sans-serif;
     overflow: hidden;
@@ -37,7 +36,8 @@ a {
 }
 
 .leaflet-top.leaflet-left .leaflet-control-zoom {
-    margin: 0px;
+    margin: 0;
+    position: absolute;
     top: 50px;
     left: 10px;
     width: 30px;
@@ -45,15 +45,21 @@ a {
     border-radius: 4px;
 }
 
-/* Shared Panels */
+/* Shared Elements */
 #filter-container,
-#data-display-container {
+#data-display-container,
+#postcode-input,
+#legend-container {
     background: #EFF1F5;
     color: #4C4F69;
-    padding: 8px 12px;
     border: 1px solid #CCD0DA;
     border-radius: 4px;
     width: max-content;
+}
+
+#filter-container,
+#data-display-container {
+    padding: 8px 12px;
 }
 
 #search-button,
@@ -69,7 +75,6 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #search-button:hover,
@@ -83,7 +88,6 @@ a {
     top: 10px;
     left: 10px;
     z-index: 10;
-    text-align: center;
 }
 
 /* Postcode Search */
@@ -94,11 +98,6 @@ a {
 }
 
 #postcode-input {
-    background: #EFF1F5;
-    color: #4C4F69;
-    border: 1px solid #CCD0DA;
-    border-radius: 4px;
-    width: max-content;
     box-sizing: border-box;
     text-transform: uppercase;
     font-weight: bold;
@@ -120,16 +119,11 @@ a {
 #legend-container {
     position: absolute;
     right: calc(100% + 6px);
-    background: #EFF1F5;
-    color: #4C4F69;
-    border: 1px solid #CCD0DA;
-    border-radius: 4px;
     cursor: pointer;
-    width: max-content;
 }
 
 .legend-details summary {
-    padding: 4px 12px; 
+    padding: 4px 12px;
     line-height: 20px;
     display: list-item;
     cursor: pointer;
