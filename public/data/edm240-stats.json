@@ -1,5 +1,5 @@
 {
-  "totalSignatures": 141,
+  "totalSignatures": 142,
   "partyBreakdown": {
     "Labour": {
       "signatures": 76,
@@ -7,9 +7,9 @@
       "percentageSigned": 19
     },
     "Lib Dem": {
-      "signatures": 48,
+      "signatures": 49,
       "totalMPsInParliament": 72,
-      "percentageSigned": 67
+      "percentageSigned": 68
     },
     "Green Party": {
       "signatures": 3,
