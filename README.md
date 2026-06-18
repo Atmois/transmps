@@ -19,7 +19,7 @@ Some content in this project is sourced from third-party sources and is subject 
 - MP Roster Data and Images from the UK Parliament (https://members.parliament.uk/)
   - Contains Parliamentary information licensed under the [Open Parliament Licence v3.0](https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/)
 - Map Tiles from CARTO (https://carto.com) and OpenStreetMap (https://openstreetmap.org/)
-  - © OpenStreetMap contributors
+  - © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright/)
   - © CARTO
 - Postcode Geocoding from Postcodes.io (https://postcodes.io/)
   - Contains Ordnance Survey data, © Royal Mail copyright,
