@@ -3,7 +3,7 @@
   "partyBreakdown": {
     "Labour": {
       "signatures": 78,
-      "totalMPsInParliament": 402,
+      "totalMPsInParliament": 403,
       "percentageSigned": 19
     },
     "Lib Dem": {
@@ -23,8 +23,8 @@
     },
     "SNP": {
       "signatures": 6,
-      "totalMPsInParliament": 7,
-      "percentageSigned": 86
+      "totalMPsInParliament": 8,
+      "percentageSigned": 75
     },
     "Your Party": {
       "signatures": 2,
@@ -43,7 +43,7 @@
     },
     "Conservative": {
       "signatures": 0,
-      "totalMPsInParliament": 116,
+      "totalMPsInParliament": 117,
       "percentageSigned": 0
     },
     "Reform UK": {
@@ -84,11 +84,6 @@
     "Ulster Unionist Party": {
       "signatures": 0,
       "totalMPsInParliament": 1,
-      "percentageSigned": 0
-    },
-    "Vacant": {
-      "signatures": 0,
-      "totalMPsInParliament": 3,
       "percentageSigned": 0
     }
   }
