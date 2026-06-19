@@ -7,9 +7,9 @@
       "percentageSigned": 19
     },
     "Lib Dem": {
-      "signatures": 51,
+      "signatures": 50,
       "totalMPsInParliament": 71,
-      "percentageSigned": 72
+      "percentageSigned": 70
     },
     "Green Party": {
       "signatures": 3,
@@ -17,9 +17,9 @@
       "percentageSigned": 60
     },
     "Independent": {
-      "signatures": 1,
+      "signatures": 2,
       "totalMPsInParliament": 13,
-      "percentageSigned": 8
+      "percentageSigned": 15
     },
     "SNP": {
       "signatures": 6,
