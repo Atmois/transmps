@@ -159,9 +159,13 @@ async function calculateEDMStats() {
             return acc;
         }, {});
 
-        // Fixes issue with Corbyn being listed as Independent instead of YP
-            partyCounts["Your Party"] = partyCounts["Your Party"] + 1;
-            partyCounts["Independent"] = partyCounts["Independent"] - 1;
+        // Fixes Jeremy Corbyn being listed as Independent instead of YP
+        partyCounts["Your Party"] = partyCounts["Your Party"] + 1;
+        partyCounts["Independent"] = partyCounts["Independent"] - 1;
+
+        // Fixes Cameron Thomas being listed as Lib Dem instead of Independent
+        partyCounts["Independent"] = partyCounts["Independent"] + 1;
+        partyCounts["Lib Dem"] = partyCounts["Lib Dem"] - 1;
 
         const fullStats = {
             totalSignatures: signeeConstituencies.size,
