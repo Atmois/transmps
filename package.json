@@ -2,7 +2,8 @@
   "name": "transmps",
   "description": "Find and track your MP's stance and votes on transgender rights across the UK",
   "scripts": {
-    "build:map": "node scripts/build-map.mjs",
+    "build:map": "node build/build-map.mjs",
+    "build:edm240": "node build/build-edm240.mjs",
     "dev": "vite --host",
     "build": "vite build"
   },

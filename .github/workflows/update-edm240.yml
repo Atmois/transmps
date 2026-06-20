@@ -1,9 +1,14 @@
-name: Update Map Data
+name: Update EDM240 Data
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 9-21 * * 1-5'
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+        - '/public/data/**'
 
 jobs:
   build:
@@ -28,7 +33,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Run build script
-        run: pnpm build:map
+        run: pnpm build:edm240
 
       - name: Commit and push if changed
         run: |
@@ -38,7 +43,7 @@ jobs:
           git add .
 
           if ! git diff --cached --quiet; then
-            git commit -m "auto: update map data"
+            git commit -m "auto: update edm240 data"
             git push
           else
             echo "No changes to commit"
