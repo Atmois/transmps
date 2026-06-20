@@ -69,29 +69,29 @@ fetch('/data/mps.geojson')
     })
     .catch(err => console.error("Map loading error:", err));
 
-// Colours grabbed from party branding guidelines, or from parliament.uk where not available
+// Colours from party brand guidelines, or from parliament.uk where not available
 function getPartyStyle(party) {
     let colour = '#FFFFFF';
 
     // Special Cases
     if (party === 'Speaker') colour = '#333333';
-    if (party === 'Independent') colour = '#777777';
+    if (party === 'Independent') colour = '#909090';
 
     // Parties (Sorted alphabetically)
-    if (party === 'Alliance') colour = '#F4C72E';
-    if (party === 'Conservative') colour = '#0063B7';
+    if (party === 'Alliance') colour = '#CDAF2D';
+    if (party === 'Conservative') colour = '#0063BA';
     if (party === 'Democratic Unionist Party') colour = '#D46A4C';
     if (party === 'Green Party') colour = '#00A85A';
     if (party === 'Labour' || party === 'Labour (Co-op)') colour = '#E4003B';
     if (party === 'Liberal Democrat') colour = '#FF6400';
     if (party === 'Plaid Cymru') colour = '#0AA77D';
-    if (party === 'Reform UK') colour = '#17B9D1';
-    if (party === 'Restore Britain') colour = '#062042';
-    if (party === 'Scottish National Party') colour = '#FDF391';
+    if (party === 'Reform UK') colour = '#00BED6';
+    if (party === 'Restore Britain') colour = '#051C3F';
+    if (party === 'Scottish National Party') colour = '#FFF685';
     if (party === 'Sinn Féin') colour = '#02665F';
-    if (party === 'Social Democratic & Labour Party') colour = '#FF0000';
-    if (party === 'Traditional Unionist Voice') colour = '#201863';
-    if (party === 'Ulster Unionist Party') colour = '#23315C';
+    if (party === 'Social Democratic & Labour Party') colour = '#4EA268';
+    if (party === 'Traditional Unionist Voice') colour = '#0C3A6A';
+    if (party === 'Ulster Unionist Party') colour = '#A1CDF0';
     if (party === 'Your Party') colour = '#FD4E4E';
 
     return {
