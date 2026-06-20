@@ -1,8 +1,8 @@
 let geoJsonLayer;
-let highlightedLayer = null;
-let postcodeMarker = null;
+window.highlightedLayer = null;
+window.postcodeMarker = null;
 
-const map = L.map('map', {
+window.map = L.map('map', {
     center: [55.75, -3.5],
     zoom: 6,
     minZoom: 6,

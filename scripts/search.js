@@ -18,21 +18,21 @@ function handleSearch() {
             const constituencyName = data.result.parliamentary_constituency;
             let matchFound = false;
 
-            if (highlightedLayer || postcodeMarker) {
-                if (highlightedLayer) {
-                    highlightedLayer.setStyle({
+            if (window.highlightedLayer || window.postcodeMarker) {
+                if (window.highlightedLayer) {
+                    window.highlightedLayer.setStyle({
                         weight: 0.5,
                         color: '#222222',
                         fillOpacity: 0.75
                     });
                 }
-                if (postcodeMarker) map.removeLayer(postcodeMarker);
+                if (window.postcodeMarker) window.map.removeLayer(window.postcodeMarker);
             }
 
             geoJsonLayer.eachLayer(function (layer) {
                 if (layer.feature.properties.PCON24NM.toLowerCase() === constituencyName.toLowerCase()) {
                     matchFound = true;
-                    highlightedLayer = layer;
+                    window.highlightedLayer = layer;
                     layer.setStyle({
                         weight: 5,
                         color: '#FF80FF'
@@ -42,17 +42,17 @@ function handleSearch() {
             });
 
             if (matchFound) {
-                postcodeMarker = L.circleMarker([postcodeLat, postcodeLng], {
+                window.postcodeMarker = L.circleMarker([postcodeLat, postcodeLng], {
                     radius: 7,
                     fillColor: '#FF80FF',
                     color: '#FFFFFF',
                     weight: 2,
                     fillOpacity: 0.8
-                }).addTo(map);
+                }).addTo(window.map);
 
-                postcodeMarker.bringToFront();
-                map.setView([postcodeLat, postcodeLng], 11);
-                highlightedLayer.openPopup([postcodeLat, postcodeLng]);
+                window.postcodeMarker.bringToFront();
+                window.map.setView([postcodeLat, postcodeLng], 11);
+                window.highlightedLayer.openPopup([postcodeLat, postcodeLng]);
             }
 
         })
