@@ -25,7 +25,67 @@
 <body>
     <main>
         <div id="map"></div>
+
         <div id="info-button">i</div>
+        <div id="info-menu" style="display: none;">
+            <div id="info-content">
+                <span id="close-info-menu">&times;</span>
+                <h3>
+                    <b>
+                        THIS THURSDAY please consider attending the <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">Mass Lobby of Parliament</a>
+                        to to see your MP and demand better for trans+ people all across the UK.
+                    </b>
+                </h3>
+                <p>
+                    This site exists to provide you information on your MP's to inform your voting and provide any references to their stances on trans rights.
+                </p>
+                <p>
+                    The site is not affiliated with any political party or organisation and I am not endorsing any candidate or party on the site. As I know someone will question
+                    it, this site is run independently by a trans person in their own time. I aim to keep this site poltically neutral and based on facts from offical sources but
+                    of course I might make mistakes so please do reach out if you see any.
+                    <br />
+                    We also utilise several 3rd party services to provide the map and data on this site, of which you can find more information on the specifics here:
+                    <a href="https://github.com/Atmois/transmps#3rd-party-licenses" target="_blank">github.com/Atmois/transmps#3rd-party-licenses</a>.
+                </p>
+                <p>
+                    If you have any corrections, additions or improvements you can submit them on the
+                    <a href="https://github.com/atmois/transmps" target="_blank">GitHub repo</a>
+                    or you can email me at <a href="mailto:zoe@transmps.uk">zoe@transmps.uk</a>.
+                    <br>
+                    <i>
+                        Also if you're going to send me hate speech, don't even bother, you will be unconditionally blocked and sent this
+                        <a href="https://www.youtube.com/watch?v=NaFd8ucHLuo" target="_blank">wonderful song</a>.
+                    </i>
+                </p>
+                <p>
+                    Right now the site is focused on tracking EDM240, but I am working on making a tracking system for MP stances and statements on trans rights, in the meantime
+                    you are able to submit any references to MP stances and statements on the GitHub repo linked above in preperation for addition once it is implemented. I'm also
+                    looking into if I can make a live feed of MP updates on Bluesky so if you are able to help me figure that out, please reach out!
+                </p>
+                <p>
+                    To provide extra data or sources and information on MP stances, please ensure you can back it up with a citation, ideally a
+                    <a href="https://hansard.parliament.uk/" target="_blank">Hansard Transcript</a> or evidence from a reputable outlet. This is to ensure this site can remain as
+                    factual as possible and be used to the public on their MP's stances and provide as a reputable reference source. If you know of a statment but cannot find a
+                    source, reach out and I can help you find it or provide a source for it, but I will not add any references or information without a reputable source to prevent
+                    the spread of misinformation.
+                </p>
+                <p>
+                    Now a little bit about the site, I saw <a href="https://edm.parliament.uk/early-day-motion/65938" target="_blank">EDM240</a> and
+                    thought "wouldn't it be nice to visualise this and have some party stats" so I bought the domain <a href="https://transmps.uk">transmps.uk</a> and made this
+                    site! I do not make any money off the site, nor do I ever plan to, but if you want to support the site, you can do so by sharing the site to educate others
+                    about our representives stances on trans rights and spread awareness of the challanges we face in our daily lives. If you want to support trans folk in the UK
+                    check out:
+                <ul>
+                    <li><a href="https://transsolidarityalliance.com" target="_blank">Trans Solidarity Alliance</a></li>
+                    <li><a href="https://scottishtrans.org" target="_blank">Scottish Trans</a></li>
+                    <li><a href="https://goodlawproject.org/crowdfunder/supreme-court-human-rights-for-trans-people/" target="_blank">Good Law Project</a></li>
+                    <li><a href="https://whatthetrans.com/compilation-of-protests-against-the-supreme-court/" target="_blank">Protests Against the Supreme Court Ruling</a></li>
+                </ul>
+                </p>
+
+
+            </div>
+        </div>
 
         <div class="map-overlay top-right">
             <div class="search-row">
@@ -70,7 +130,10 @@
             <div id="filter-container">
                 <strong>Filters</strong>
                 <br />
-                <label><input type="checkbox" id="filter-edm240" checked> <a href="https://edm.parliament.uk/early-day-motion/65938" target="_blank">EDM240</a></label>
+                <label>
+                    <input type="checkbox" id="filter-edm240" checked>
+                    <span id="edm240-trigger" style="color: #0066cc; text-decoration: underline; cursor: pointer;">EDM240</span>
+                </label>
             </div>
 
             <div id="data-display-container" style="display: none;">
