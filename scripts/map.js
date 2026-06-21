@@ -11,6 +11,15 @@ window.map = L.map('map', {
     zoomControl: false
 });
 
+const mapContainer = window.map.getContainer();
+if (mapContainer) {
+    mapContainer.setAttribute('role', 'application');
+    mapContainer.setAttribute(
+        'aria-label',
+        'Interactive map showing UK MP stances and votes. on trans rights. Use the arrow keys to pan the map and the scroll wheel to zoom.'
+    );
+}
+
 // Recreate to move around the info button
 L.control.zoom({ position: 'topleft' }).addTo(map);
 
