@@ -1,6 +1,6 @@
 // --- DOM Elements ---
 const infoButton = document.getElementById('info-button');
-const edmTrigger = document.getElementById('edm240-trigger');
+const edmInfoButton = document.getElementById('edm240-info-button');
 const infoMenu = document.getElementById('info-menu');
 const infoContent = document.getElementById('info-content');
 const originalInfoContent = infoContent.innerHTML;
@@ -46,7 +46,7 @@ infoButton.addEventListener('click', () => {
 });
 
 // EDM Info
-edmTrigger.addEventListener('click', (e) => {
+edmInfoButton.addEventListener('click', (e) => {
     e.preventDefault();
     infoContent.innerHTML = edmInfoContent;
     infoMenu.style.display = 'block';

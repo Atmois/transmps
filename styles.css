@@ -90,28 +90,33 @@ a {
     z-index: 10;
 }
 
+#edm240-info-button {
+    color: #0066CC;
+    cursor: pointer;
+}
+
 #info-menu {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
 }
 
 #info-content {
-  background-color: #EFF1F5;
-  border: 1px solid #CCD0DA;
-  margin: 10% auto;
-  padding: 20px;
-  width: 75%;
-  max-height: 60vh;
-  overflow-y: auto;
-  border-radius: 8px;
+    background-color: #EFF1F5;
+    border: 1px solid #CCD0DA;
+    margin: 10% auto;
+    padding: 20px;
+    width: 75%;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 8px;
 }
 
 #close-info-menu {
-  float: right;
-  cursor: pointer;
-  font-size: 24px;
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
 }
 
 /* Postcode Search */
