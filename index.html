@@ -23,13 +23,21 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <h1>Trans MP Support</h1>
+    </header>
+    <footer role="contentinfo">
+        <p>&copy; 2026 Atmois. Apache 2.0</p>
+    </footer>
     <main>
         <div id="map"></div>
 
-        <div id="info-button">i</div>
+        <div id="info-button" role="button" tabindex="0" aria-label="Open information menu">i</div>
+
         <div id="info-menu" style="display: none;">
             <div id="info-content">
-                <span id="close-info-menu">&times;</span>
+                <span id="close-info-menu" role="button" tabindex="0" aria-label="Close information menu">&times;</span>
                 <h3>
                     <b>
                         THIS THURSDAY please consider attending the <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">Mass Lobby of Parliament</a>
@@ -52,10 +60,10 @@
                     <a href="https://github.com/atmois/transmps" target="_blank">GitHub repo</a>
                     or you can email me at <a href="mailto:zoe@transmps.uk">zoe@transmps.uk</a>.
                     <br>
-                    <i>
+                    <em>
                         Also if you're going to send me hate speech, don't even bother, you will be unconditionally blocked and sent this
                         <a href="https://www.youtube.com/watch?v=NaFd8ucHLuo" target="_blank">wonderful song</a>.
-                    </i>
+                    </em>
                 </p>
                 <p>
                     Right now the site is focused on tracking EDM240, but I am working on making a tracking system for MP stances and statements on trans rights, in the meantime
@@ -123,7 +131,7 @@
 
                 <div id="search-container">
                     <input type="text" id="postcode-input" placeholder="Postcode" aria-label="Postcode Entry">
-                    <button id="search-button">&#x2315;</button>
+                    <button id="search-button" aria-label="Search">&#x2315;</button>
                 </div>
             </div>
 
@@ -140,7 +148,7 @@
                 <strong id="data-box-title">EDM240 Votes</strong>
                 <br />
                 <div id="data-box-content"></div>
-                <sub> <i>Highlighted = Signee</i> </sub>
+                <sub> <em>Highlighted = Signee</em> </sub>
             </div>
         </div>
     </main>
