@@ -41,7 +41,7 @@ async function filterEDMSignatures() {
                 partyRow.innerHTML = `
                     <span>${party}:</span>
                     <strong>${stats.signatures}</strong>
-                    <small style="color: #666;">(${stats.percentageSigned}%)</small>
+                    <small style="color: #666666;">(${stats.percentageSigned}%)</small>
                 `;
 
                 contentContainer.appendChild(partyRow);
