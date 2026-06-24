@@ -1,5 +1,5 @@
 {
-  "totalSignatures": 154,
+  "totalSignatures": 155,
   "partyBreakdown": {
     "Labour": {
       "signatures": 84,
@@ -22,9 +22,9 @@
       "percentageSigned": 15
     },
     "SNP": {
-      "signatures": 6,
+      "signatures": 7,
       "totalMPsInParliament": 8,
-      "percentageSigned": 75
+      "percentageSigned": 88
     },
     "Your Party": {
       "signatures": 2,
