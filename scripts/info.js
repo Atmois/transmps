@@ -33,9 +33,9 @@ const edmInfoContent = `
 
         <br /><br />
 
-        If you are able to attend the Mass Lobby of Parliament in support of EDM240 on Thursday 25th June, please consider doing so. You can find more information about the event at
+        If you are able to attend the Mass Lobby of Parliament in support of EDM240 on Wednesday the 9th of September, please consider doing so. You can find more information about the event at
         <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">transsolidarityalliance.com/mass-lobby-2026</a>. The information above was partially sourced from
-        the <a href="https://www.transsolidarityalliance.com/mass-lobby-20266" target="_blank">Trans+ Solidary Alliance Mass Lobby Briefing</a>.
+        the <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">Trans+ Solidary Alliance Mass Lobby Briefing</a>.
     </p>
 `;
 
