@@ -48,7 +48,7 @@
     },
     "Reform UK": {
       "signatures": 0,
-      "totalMPsInParliament": 7,
+      "totalMPsInParliament": 8,
       "percentageSigned": 0
     },
     "Sinn Féin": {
@@ -82,11 +82,6 @@
       "percentageSigned": 0
     },
     "Ulster Unionist Party": {
-      "signatures": 0,
-      "totalMPsInParliament": 1,
-      "percentageSigned": 0
-    },
-    "Vacant": {
       "signatures": 0,
       "totalMPsInParliament": 1,
       "percentageSigned": 0
