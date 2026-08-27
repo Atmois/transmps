@@ -23,7 +23,7 @@ if (mapContainer) {
 // Recreate to move around the info button
 L.control.zoom({ position: 'topleft' }).addTo(map);
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png?key=cb1_2dbk_1_92035352b69224d8efa158c3', {
     attribution: ['&copy; <a href="https://github.com/atmois/transmps#3rd-party-licenses" target="_blank">https://github.com/Atmois/transmps#3rd-party-licenses</a>',
         'This project is independent and is not affiliated with any government entity.'].join(' | '),
     tileAttributes: {
