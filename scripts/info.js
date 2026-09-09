@@ -30,12 +30,6 @@ const edmInfoContent = `
         and you can find your MP's contact details on the <a href="https://members.parliament.uk/members/commons" target="_blank">parliament.uk</a> site. Remember to be polite
         and respectful when contacting your MP, as they are more likely to respond positively to well-reasoned arguments and respectful communication. You can also ask your friends
         to contact their MP's as well to show that this is an issue that matters to people across the UK and political spectrum.
-
-        <br /><br />
-
-        If you are able to attend the Mass Lobby of Parliament in support of EDM240 on Wednesday the 9th of September, please consider doing so. You can find more information about the event at
-        <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">transsolidarityalliance.com/mass-lobby-2026</a>. The information above was partially sourced from
-        the <a href="https://www.transsolidarityalliance.com/mass-lobby-2026" target="_blank">Trans+ Solidary Alliance Mass Lobby Briefing</a>.
     </p>
 `;
 
