@@ -2,7 +2,7 @@ name: Update EDM240 Data
 
 on:
   schedule:
-    - cron: '0 9-21 * * 1-5'
+    - cron: '0 1 * * 6'
   workflow_dispatch:
 
 jobs:
