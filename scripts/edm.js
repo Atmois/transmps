@@ -13,6 +13,15 @@ async function filterEDMSignatures() {
         displayContainer.style.display = 'none';
         return;
     }
+    if (isChecked) {
+        document.getElementById('filter-party').checked = false;
+        window.geoJsonLayer.eachLayer(layer => {
+            const props = layer.feature.properties;
+            const baseStyle = getPartyStyle(props.mp_party);
+            props.currentOpacity = baseStyle.fillOpacity;
+            layer.setStyle(baseStyle);
+        });
+    }
 
     displayContainer.style.display = '';
     contentContainer.style.display = '';
@@ -97,7 +106,8 @@ async function filterEDMSignatures() {
     }
 }
 
-document.addEventListener('mapLayersReady', filterEDMSignatures);
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('filter-edm240').addEventListener('change', filterEDMSignatures);
 });
+// KEEP THIS TRIGGER OR ELSE THE HOVERING OPACITY CHANGE BREAKS
+document.addEventListener('mapLayersReady', filterEDMSignatures);

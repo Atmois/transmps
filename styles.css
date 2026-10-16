@@ -82,7 +82,7 @@ a {
     background: #CA9EE6;
 }
 
-/* Info Button & Menu */
+/* Info Button */
 #info-button {
     position: absolute;
     top: 10px;
@@ -90,33 +90,87 @@ a {
     z-index: 10;
 }
 
-#edm240-info-button {
+#info-button:focus-visible,
+#close-info-menu:focus-visible {
+    outline: 2px solid #0066CC;
+    outline-offset: 2px;
+}
+
+#edm240-info-button,
+#party-info-button {
     color: #0066CC;
     cursor: pointer;
 }
 
+#edm240-info-button:hover,
+#party-info-button:hover {
+    text-decoration: underline;
+}
+
+/* Info Menu */
 #info-menu {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#info-dialog {
+    position: relative;
+    display: flex;
+    width: 75%;
+    max-height: min(88vh, 900px);
+    max-height: min(88dvh, 900px);
+    background: #EFF1F5;
+    color: #4C4F69;
+    border: 1px solid #CCD0DA;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 #info-content {
-    background-color: #EFF1F5;
-    border: 1px solid #CCD0DA;
-    margin: 10% auto;
-    padding: 20px;
-    width: 75%;
-    max-height: 60vh;
+    flex: 0 1 auto;
+    min-height: 0;
     overflow-y: auto;
-    border-radius: 8px;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    padding: 28px 24px 24px;
+    font-size: 15px;
+    line-height: 1.55;
 }
 
+#info-content blockquote {
+    margin: 4px 0 8px 12px;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
 #close-info-menu {
-    float: right;
-    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #4C4F69;
     font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#close-info-menu:hover {
+   font-size: 36px;
 }
 
 /* Postcode Search */

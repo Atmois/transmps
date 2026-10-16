@@ -111,4 +111,3 @@ function getPartyStyle(party) {
         fillOpacity: 0.75
     };
 }
-
