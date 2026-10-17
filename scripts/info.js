@@ -5,7 +5,7 @@ const infoMenu = document.getElementById('info-menu');
 const infoContent = document.getElementById('info-content');
 const closeInfoButton = document.getElementById('close-info-menu');
 
-async function openInfo(file) {
+export async function openInfo(file) {
     const response = await fetch(file);
     infoContent.innerHTML = await response.text();
     infoContent.scrollTop = 0;

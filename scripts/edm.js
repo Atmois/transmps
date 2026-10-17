@@ -1,16 +1,19 @@
+import { openInfo } from './info.js';
+
+const dataBox = document.getElementById('data-display-container');
+const dataBoxContent = document.getElementById('data-box-content');
+const dataBoxNote = document.getElementById('data-box-note')
+
 async function filterEDMSignatures() {
     if (!window.geoJsonLayer) return;
     const isChecked = document.getElementById('filter-edm240').checked;
-
-    const displayContainer = document.getElementById('data-display-container');
-    const contentContainer = document.getElementById('data-box-content');
 
     if (!isChecked) {
         window.geoJsonLayer.eachLayer(layer => {
             layer.feature.properties.currentOpacity = 0.75;
             layer.setStyle({ fillOpacity: 0.75 });
         });
-        displayContainer.style.display = 'none';
+        dataBox.style.display = 'none';
         return;
     }
     if (isChecked) {
@@ -23,8 +26,8 @@ async function filterEDMSignatures() {
         });
     }
 
-    displayContainer.style.display = '';
-    contentContainer.style.display = '';
+    dataBox.style.display = '';
+    dataBoxContent.style.display = '';
 
     try {
         const response = await fetch('/data/edm240-stats.json');
@@ -35,11 +38,15 @@ async function filterEDMSignatures() {
 
         const data = await response.json();
 
-        contentContainer.innerHTML = '';
+        dataBoxContent.innerHTML = '';
+        dataBoxNote.dataset.mode = 'edm240';
+        dataBoxNote.style.cursor = "cursor"
+        dataBoxNote.innerHTML = 'Highlighted = Signee<br/><a>More Info</a>'
 
-        const totalElem = document.createElement('p');
-        totalElem.innerHTML = `<strong>Total:</strong> ${data.totalSignatures}`;
-        contentContainer.appendChild(totalElem);
+        const totalElement = document.createElement('p');
+        totalElement.innerHTML = `<strong>Total:</strong> ${data.totalSignatures}`;
+
+        dataBoxContent.appendChild(totalElement);
 
         // Iterate through the party breakdown
         Object.entries(data.partyBreakdown).forEach(([party, stats]) => {
@@ -53,13 +60,13 @@ async function filterEDMSignatures() {
                     <small style="color: #666666;">(${stats.percentageSigned}%)</small>
                 `;
 
-                contentContainer.appendChild(partyRow);
+                dataBoxContent.appendChild(partyRow);
             }
         });
 
     } catch (error) {
         console.error("Could not load the EDM stats:", error);
-        contentContainer.innerHTML = `<p style="color: red;">Error loading data.</p>`;
+        dataBoxContent.innerHTML = `<p style="color: red;">Error loading data.</p>`;
     }
 
     try {
@@ -108,6 +115,10 @@ async function filterEDMSignatures() {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('filter-edm240').addEventListener('change', filterEDMSignatures);
+});
+dataBoxNote.addEventListener('click', () => {
+    if (dataBoxNote.dataset.mode !== 'edm240') return;
+    openInfo('info/edm240.html');
 });
 // KEEP THIS TRIGGER OR ELSE THE HOVERING OPACITY CHANGE BREAKS
 document.addEventListener('mapLayersReady', filterEDMSignatures);
