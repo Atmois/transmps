@@ -17,9 +17,9 @@ function closeInfo() {
     infoMenu.style.display = 'none';
 }
 
-infoButton.addEventListener('click', () => openInfo('info/about.html'));
-edmInfoButton.addEventListener('click', () => openInfo('info/edm240.html'));
-partyInfoButton.addEventListener('click', () => openInfo('info/parties.html'));
+infoButton.addEventListener('click', () => openInfo('/info/about.html'));
+edmInfoButton.addEventListener('click', () => openInfo('/info/edm240.html'));
+partyInfoButton.addEventListener('click', () => openInfo('/info/parties.html'));
 
 infoMenu.addEventListener('click', (e) => {
     if (e.target === infoMenu || e.target.closest('#close-info-menu')) {
