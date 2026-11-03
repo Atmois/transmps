@@ -57,7 +57,7 @@ async function filterPartyStances() {
             <div class="party-row"><span>Supportive:</span> <strong>${counts.supportive}</strong></div>
             <div class="party-row"><span>Hostile:</span> <strong>${counts.hostile}</strong></div>
             <div class="party-row"><span>No stance:</span> <strong>${counts.other}</strong></div>
-            <div class="party-row"><span>Excluded:</span> <strong>${counts.other}</strong></div>
+            <div class="party-row"><span>Excluded:</span> <strong>${counts.none}</strong></div>
         `;
         dataBoxContent.style.display = '';
         dataBox.style.display = '';
