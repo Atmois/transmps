@@ -49,7 +49,8 @@ a {
 #filter-container,
 #data-display-container,
 #postcode-input,
-#legend-container {
+#legend-container,
+#top-container {
     background: #EFF1F5;
     color: #4C4F69;
     border: 1px solid #CCD0DA;
